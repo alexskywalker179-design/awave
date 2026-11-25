@@ -1,4 +1,4 @@
-from entities import Food
+from entities import Food, Socket
 def Microwave(Food):
     food = [
         "Суп",
@@ -67,3 +67,5 @@ def Microwave(door):
     else:
         print("Микровалновка закрыта!")        
     
+    
+

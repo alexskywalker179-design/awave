@@ -3,13 +3,13 @@ class MicrowaveEntity:
     type_of_entity = None
     
     def __init__(self):
-        type_of_entity = self.type_of_entity
+        self.type_of_entity = self.type_of_entity
     
 class Socket(MicrowaveEntity):
     voltage = 0,
     
-    def __init__(self):
-        voltage = self.voltage
+    def __init__(self, voltage):
+        self.voltage = voltage
 
 
 class Food(MicrowaveEntity):
@@ -17,10 +17,10 @@ class Food(MicrowaveEntity):
     quantity = 0
     temperature = 21
     
-    def __init__(self):
-        name = self.name
-        quantity = self.quantity  
-        temperature = self.temperature
+    def __init__(self, name, quantity, temperature):
+        self.name = name
+        self.quantity = quantity
+        self.temperature = temperature
 
 class Microwave(MicrowaveEntity):
     model = None,
@@ -28,10 +28,11 @@ class Microwave(MicrowaveEntity):
     mode = None,
     foods = []    
     
-    def __init__(self):
-        model = self.model
-        capacity = self.capacity
-        foods = self.foods
+    def __init__(self, model, capacity_limit, mode, foods):
+        self.model = model
+        self.capacity_limit = capacity_limit
+        self.mode = mode
+        self.foods = foods
      
     def put_to_microwave(self, food):
         if self.capacity_limit<=0:
