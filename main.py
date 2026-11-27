@@ -41,7 +41,7 @@ def Microwave(capacity_limit):
         "8",
         "9",
         "10",]
-def Voltage(Socket):
+def voltage(Socket):
     socket = [
         "220V",]
     for v in socket:
@@ -65,7 +65,8 @@ def Microwave(door):
     if door == "Открыта":
         print("Микровалновка открыта!")
     else:
-        print("Микровалновка закрыта!")        
+        print("Микровалновка закрыта!")       
+ 
     
     
 
